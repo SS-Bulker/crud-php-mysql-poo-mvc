@@ -50,15 +50,15 @@ if(isset($_GET['action'])){
 <h1>Add Users</h1>
 </center>
   <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
+    <label for="name">Name</label>
     <input type="text" class="form-control" name="name" id="name" maxlength="10" placeholder="Maximum 10 characters" required>
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
+    <label for="email">Email</label>
     <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Address</label>
+    <label for="address">Address</label>
     <input type="text" class="form-control" name="address" id="address" placeholder="Enter address" required>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
