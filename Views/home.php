@@ -35,7 +35,7 @@ $delete -> deleteUsersController();
 <div class="col-md-4">
 <div class="card">
 <div class="card-body">
-<form method="POST">
+<form method="POST" onsubmit="return validation()">
 <?php
 $registry = new UsersController();
 $registry -> registryUsersController();
@@ -51,15 +51,15 @@ if(isset($_GET['action'])){
 </center>
   <div class="form-group">
     <label for="exampleInputEmail1">Name</label>
-    <input type="text" class="form-control" name="name" placeholder="Enter name" required>
+    <input type="text" class="form-control" name="name" id="name" maxlength="10" placeholder="Maximum 10 characters" required>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email</label>
-    <input type="email" class="form-control" name="email" placeholder="Enter email" required>
+    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Address</label>
-    <input type="text" class="form-control" name="address" placeholder="Enter address" required>
+    <input type="text" class="form-control" name="address" id="address" placeholder="Enter address" required>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

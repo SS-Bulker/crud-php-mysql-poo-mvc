@@ -30,7 +30,7 @@ class UsersController{
         if($answer == "Success"){
             header("location: index.php?action=SuccessfulRegistration");
         }else{
-            header("location: index.php");
+            echo "<div class='alert alert-danger' role='alert'> Registration failed! </div>";
         }
         }
     }

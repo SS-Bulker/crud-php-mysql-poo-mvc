@@ -59,7 +59,7 @@ class UsersModel extends Connection{
         require_once 'libraries/passwords/SED.php';
         $id = SED::decryption($dataModel['id_users']);
         $stmt = Connection::connect()->prepare("UPDATE $table SET name = :name, email = :email, address = :address WHERE id_users = :id_users");
-        $stmt->bindParam(":id_users", $id, PDO::PARAM_STR);
+        $stmt->bindParam(":id_users", $id, PDO::PARAM_INT);
         $stmt->bindParam(":name", $dataModel['name'], PDO::PARAM_STR);
         $stmt->bindParam(":email", $dataModel['email'], PDO::PARAM_STR);
         $stmt->bindParam(":address", $dataModel['address'], PDO::PARAM_STR);
@@ -82,9 +82,6 @@ class UsersModel extends Connection{
         }
         $stmt->close();
     }
-
 }
-
-
 
 ?>

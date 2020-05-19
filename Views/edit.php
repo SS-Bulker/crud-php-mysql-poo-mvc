@@ -3,7 +3,7 @@
 <div class="col-md-4">
 <div class="card">
 <div class="card-body">
-<form method="POST">
+<form method="POST" onsubmit="return validation()">
 <center>
 <h1>Edit Users</h1>
 </center>
